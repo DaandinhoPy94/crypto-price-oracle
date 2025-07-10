@@ -12,4 +12,4 @@ AI-Powered Cryptocurrency Price Prediction Platform
 \`\`\`bash
 pip install -r requirements.txt
 streamlit run app.py
-\`\`\`" > README.md
+\`\`\`" > README.md# Cache refresh do 10 jul. 2025 22:23:16 CEST
