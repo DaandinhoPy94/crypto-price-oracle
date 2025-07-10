@@ -47,8 +47,8 @@ class PyTorchLSTMPredictor:
         X, y = self.prepare_data(data)
         
         # Convert to PyTorch tensors
-        X = torch.FloatTensor(X).unsqueeze(-1)  # Add feature dimension
-        y = torch.FloatTensor(y).unsqueeze(-1)
+        X = torch.FloatTensor(X).reshape(X.shape[0], X.shape[1], 1)  # Proper 3D shape
+        y = torch.FloatTensor(y).reshape(-1, 1)  # Proper 2D shape
         
         # Initialize model
         self.model = PyTorchLSTM()
@@ -83,7 +83,7 @@ class PyTorchLSTMPredictor:
         with torch.no_grad():
             for _ in range(forecast_days):
                 # Convert to tensor
-                X = torch.FloatTensor(current_sequence).unsqueeze(0).unsqueeze(-1)
+                X = torch.FloatTensor(current_sequence).reshape(1, self.sequence_length, 1)
                 
                 # Make prediction
                 pred = self.model(X).item()
