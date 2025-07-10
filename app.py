@@ -4,7 +4,7 @@ import plotly.express as px
 from src.data_collector import CryptoDataCollector
 from src.predictor import CryptoPricePredictor
 import pandas as pd
-from src.lstm_predictor import LSTMPredictor
+from src.pytorch_lstm_predictor import PyTorchLSTMPredictor
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import numpy as np
 
@@ -193,7 +193,7 @@ with tab2:
             # Train LSTM
             if model_type in ["Both Models", "LSTM Only"]:
                 try:
-                    lstm_predictor = LSTMPredictor(sequence_length=60)
+                    lstm_predictor = PyTorchLSTMPredictor(sequence_length=60)
                     
                     # LSTM needs more data - check if we have enough
                     if len(train_data) >= 100:
