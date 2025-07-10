@@ -4,7 +4,7 @@ import plotly.express as px
 from src.data_collector import CryptoDataCollector
 from src.predictor import CryptoPricePredictor
 import pandas as pd
-from src.lstm_predictor import LSTMPredictor
+# from src.lstm_predictor import LSTMPredictor
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import numpy as np
 
@@ -153,7 +153,7 @@ with tab2:
     with col1:
         model_type = st.selectbox(
             "Select AI Model:",
-            options=["Both Models", "Prophet Only", "LSTM Only"],
+            options=["Prophet Only"],
             index=0
         )
     
