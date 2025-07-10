@@ -1,4 +1,4 @@
-echo "# 🚀 Crypto Price Oracle
+# 🚀 Crypto Price Oracle
 
 AI-Powered Cryptocurrency Price Prediction Platform
 
@@ -12,4 +12,4 @@ AI-Powered Cryptocurrency Price Prediction Platform
 \`\`\`bash
 pip install -r requirements.txt
 streamlit run app.py
-\`\`\`" > README.md# Cache refresh do 10 jul. 2025 22:23:16 CEST
+\`\`\`
