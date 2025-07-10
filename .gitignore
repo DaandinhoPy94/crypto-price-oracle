@@ -1,0 +1,24 @@
+echo "# Python Virtual Environment
+venv/
+env/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Environment variables
+.env" > .gitignore
